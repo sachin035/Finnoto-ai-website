@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Defining custom CSS variables */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 11%;
+    --primary-white: 0 0% 100%;
+    --primary-black: 0 0% 11%;
+    --secondary-black: 0 0% 32%;
+    --gray: 0 0% 91%;
+    --green: 182, 52%, 54%;
+    --border: 220 6% 85%;
+    --navbar-height: 60px;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: 0 0% 11%;
+    --foreground: 0 0% 89%;
+  }
+} */
+
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,4 +53,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
