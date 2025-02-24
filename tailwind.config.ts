@@ -1,10 +1,4 @@
-import {Schoolbell} from "next/font/google";
 import type {Config} from "tailwindcss";
-
-// const schoolbellFont = Schoolbell({
-//   subsets: ["latin"],
-//   weight: "400",
-// });
 
 export default {
   content: [
@@ -35,10 +29,6 @@ export default {
       height: {
         navbar: "var(--navbar-height)",
       },
-
-      // fontFamily: {
-      //   schoolbell: schoolbellFont.style.fontFamily,
-      // },
 
       borderRadius: {
         lg: "var(--radius)",

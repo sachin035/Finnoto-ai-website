@@ -16,7 +16,7 @@ const Badge = ({label, appearance}: BadgeProps) => {
   return (
     <div
       className={cn(
-        "text-center lg:text-[20px] md:text-medium font-medium lg:px-4 md:px-3 md:py-1 py-2 rounded-full inline-flex w-fit gap-3 items-center whitespace-nowrap",
+        "text-center text-sm lg:text-[20px] md:text-base font-medium px-2 lg:px-4 md:px-3  py-2 rounded-full inline-flex w-fit gap-3 items-center whitespace-nowrap",
         {
           [statusColorSolid[appearance]]: appearance,
         }

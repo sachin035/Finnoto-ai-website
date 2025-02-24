@@ -1,40 +1,3 @@
-// import {cn} from "@/app/utils/util";
-// import {Container} from "../layout/Container";
-// import {Button} from "../ui/Button";
-// import {AiIcon} from "@/app/assets/svgs/AiIcon";
-// import {ChatBox} from "@/app/assets/svgs/ChatBox";
-
-// const JoinUs = () => {
-//   return (
-//     <Container
-//       className={cn(
-//         "border relative overflow-hidden h-[400px] flex flex-col items-center rounded-3xl pt-[70px]"
-//       )}
-//     >
-//       <div className="absolute -left-[14%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full from-[#4CC3C7]  to-[#4CC1C7] bg-gradient-to-r" />
-//       <div className="absolute -left-[4%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full from-[#4CC3C7] to-[#4CB2C71A] bg-gradient-to-r" />
-//       <div className="absolute left-[4%] top-1/2 -translate-y-1/2">
-//         <AiIcon />
-//       </div>
-//       <div className="absolute left-[16%] top-1/4 -translate-y-1/2">
-//         <ChatBox />
-//       </div>
-
-//       <div className="max-w-[50%] absolute right-[2%]">
-//         <h3 className="text-5xl font-semibold mb-8">Try Finnoto AI Today!</h3>
-//         <p className="mb-10 font-medium">
-//           Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque
-//           pellentesque donec et tellus ac varius tortor, bibendum.
-//         </p>
-
-//         <Button variant="green">Book a demo</Button>
-//       </div>
-//     </Container>
-//   );
-// };
-
-// export {JoinUs};
-
 import {Container} from "../layout/Container";
 import {Button} from "../ui/Button";
 import {AiIcon} from "@/app/assets/svgs/AiIcon";
@@ -42,37 +5,35 @@ import {ChatBox} from "@/app/assets/svgs/ChatBox";
 
 const JoinUs = () => {
   return (
-    <Container
-      mode="wide"
-      className="px-0 border rounded-3xl max-w-[1280px] mx-auto bg-primary-white relative overflow-hidden flex flex-col items-center
-      "
-    >
-      <div className="relative overflow-hidden rounded-3xl">
-        <div className="absolute xl:-left-[22%] lg:-left-[26%] md:-left-[28%] top-1/2 -translate-y-1/2 w-[697px] h-[696px] rounded-full from-[#4CC3C7] to-[#4CC1C7] bg-gradient-to-r" />
-        <div className="absolute xl:-left-[14%] lg:-left-[18%] md:-left-[20%] top-1/2 -translate-y-1/2 w-[697px] h-[697px] rounded-full from-[#4CC3C7] to-[#4CB2C71A] bg-gradient-to-r" />
+    <Container mode="wide" className="px-8 lg:px-[76px]">
+      <div className="w-full border rounded-3xl bg-primary-white relative overflow-hidden flex flex-col items-center max-h-[400px]">
+        <div className="relative overflow-hidden rounded-3xl w-full">
+          <div className="hidden md:block absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] rounded-full from-[#4CC3C7] to-[#4CC1C7] bg-gradient-to-r" />
+          <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75vw] h-[65vw] max-w-[1000px] max-h-[900px] rounded-full from-[#4CC3C7] to-[#4CB2C71A] bg-gradient-to-r " />
 
-        <div className="flex gap-[109px] px-8 py-16">
-          <div className="relative w-[50%] flex items-center justify-center">
-            <div className="absolute left-[25%] top-6 -translate-y-1/2">
-              <ChatBox />
+          <div className="flex w-full md:gap-[109px] px-6 xl:px-8 py-16 justify-between">
+            <div className="hidden md:block relative w-[50%] flex items-center justify-center">
+              <div className="absolute left-[36%] lg:left-[40%] xl:left-[28%] -top-[4%] lg:-top-[16%] xl:-top-[18%]">
+                <ChatBox className="h-[80px] w-[65px] lg:h-[100px] lg:w-[85px] xl:h-[125px] xl:w-[108px]" />
+              </div>
+              <div className="absolute left-[5%] top-1/2 -translate-y-1/2">
+                <AiIcon className="h-[130px] w-[130px] lg:w-[193px] lg:h-[194px]" />
+              </div>
             </div>
-            <div className="absolute left-[5%]">
-              <AiIcon />
-            </div>
-          </div>
 
-          <div className="max-w-[45%] flex flex-col justify-center">
-            <h3 className="xl:text-5xl lg:text-4xl text-3xl font-semibold mb-8">
-              Try Finnoto AI Today!
-            </h3>
-            <p className="mb-10 xl:text-[20px] font-medium text-secondary-black">
-              Egestas fringilla aliquam leo, habitasse arcu varius lorem elit.
-              Neque pellentesque donec et tellus ac varius tortor, bibendum.
-            </p>
-            <div>
-              <Button variant="green" className="px-6 py-3 rounded-full">
-                Book a demo
-              </Button>
+            <div className="w-full bg-transparent z-10 md:max-w-[45%] flex flex-col justify-center items-center md:items-start">
+              <h3 className="text-2xl lg:text-4xl xl:text-5xl font-semibold mb-4 md:mb-8">
+                Try Finnoto AI Today!
+              </h3>
+              <p className="mb-6 lg:mb-10 text-sm lg:font-medium xl:text-[20px] text-secondary-black text-center md:text-left">
+                Egestas fringilla aliquam leo, habitasse arcu varius lorem elit.
+                Neque pellentesque donec et tellus ac varius tortor, bibendum.
+              </p>
+              <div>
+                <Button variant="green" className="px-6 py-3 rounded-full">
+                  Contact Us
+                </Button>
+              </div>
             </div>
           </div>
         </div>

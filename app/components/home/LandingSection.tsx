@@ -8,9 +8,14 @@ import {Arrow} from "@/app/assets/svgs/Arrow";
 interface LandingSectionProps {
   title: React.ReactNode;
   description: string;
+  hideIcon?: boolean;
 }
 
-const LandingSection = ({description, title}: LandingSectionProps) => {
+const LandingSection = ({
+  description,
+  title,
+  hideIcon = false,
+}: LandingSectionProps) => {
   const aiOverviews = [
     {
       icon: Faster,
@@ -28,38 +33,44 @@ const LandingSection = ({description, title}: LandingSectionProps) => {
   return (
     <Container
       mode="wide"
-      //   className="bg-gradient-to-b from-[#1a1533] via-[#1a1533] to-[#2f455b] rounded-2xl m-5 pt-40 relative flex flex-col gap-10 items-center"
-      className="pt-16 relative flex flex-col gap-10 items-center bg-[url('/images/home/matrix-full.png')] bg-cover"
+      className="pt-16 relative flex flex-col items-center bg-[url('/images/home/matrix-full.png')] bg-cover"
     >
-      <div className="flex flex-1 justify-center items-center lg:gap-11 md:gap-8 gap-4 ">
-        {aiOverviews.map((overview, index) => {
-          const Icon = overview.icon;
-          return (
-            <div
-              className="flex lg:gap-3 md:gap-2 sm:gap-1 items-center shrink-0"
-              key={index}
-            >
-              <Icon className="md:w-8 md:h-8 sm:w-6 sm:h-6" />
-              <h3>{overview?.title}</h3>
-            </div>
-          );
-        })}
-      </div>
-      <div className="space-y-5 max-w-[50%] text-center">
+      {!hideIcon && (
+        <div className="flex flex-1 justify-center items-center pb-6 lg:gap-11 md:gap-8 gap-4 ">
+          {aiOverviews.map((overview, index) => {
+            const Icon = overview.icon;
+            return (
+              <div
+                className="flex lg:gap-3 md:gap-2 sm:gap-1 items-center shrink-0"
+                key={index}
+              >
+                <Icon className="md:w-8 md:h-8 w-6 h-6" />
+                <h3>{overview?.title}</h3>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      <div className="space-y-5 max-w-[80%] xl:max-w-[50%] text-center">
         {title}
-        <p className="text-sm sm:text-base lg:text-xl  text-secondary-black">
+        <p className="text-sm md:text-base lg:text-xl  text-secondary-black">
           {description}
         </p>
       </div>
 
-      <div className="flex gap-6">
-        <div className="text-[#4040FF]">
-          We respond <p>Quickly</p>
+      <div className="relative w-full pt-16 flex items-center justify-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <Button variant="green" size="lg">
+            Contact Us
+          </Button>
         </div>
-        <Arrow />
-        <Button variant="green" size="sm">
-          Book a Demo
-        </Button>
+
+        <div className="flex items-center gap-1 md:gap-2 text-[#4040FF] absolute left-1/2 transform -translate-x-1/2 -ml-[100px] md:-ml-[160px] lg:-ml-[180px]">
+          <div className="text-left text-[10px] md:text-sm lg:text-base">
+            We respond <p>Quickly</p>
+          </div>
+          <Arrow className="w-8 h-8 md:w-16 md:h-16 lg:w-20 lg:h-20" />
+        </div>
       </div>
     </Container>
   );

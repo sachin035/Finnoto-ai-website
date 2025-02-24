@@ -12,39 +12,15 @@ import {LinkedInIcon} from "@/app/assets/svgs/LinkedIn";
 
 const data = [
   {
-    title: "Resources",
-    lists: [
-      {name: "Affiliate Login", link: ""},
-      {name: "Affiliate Signup", link: ""},
-      {name: "Pricing", link: ""},
-      {name: "Tutorial", link: ""},
-      {
-        name: "Blog",
-        link: "",
-      },
-      {
-        name: "Contact",
-        link: "",
-      },
-    ],
-  },
-  {
     title: "Help",
     lists: [
-      {name: "Customer Support", link: ""},
-      {name: "Delivery Details", link: ""},
-      {name: "Terms & Conditions", link: ""},
-      {name: "Privacy Policy", link: ""},
+      {name: "Terms & Conditions", link: "/terms-and-condition"},
+      {name: "Privacy Policy", link: "/privacy-policy"},
     ],
   },
   {
     title: "Company",
-    lists: [
-      {name: "About", link: ""},
-      {name: "Features", link: ""},
-      {name: "Work", link: ""},
-      {name: "Career", link: ""},
-    ],
+    lists: [{name: "About", link: "/about"}],
   },
 ];
 
@@ -57,7 +33,7 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-black text-primary-white pt-[344px] ">
+    <footer className="bg-primary-black text-primary-white ">
       <Container>
         <div className="flex flex-wrap items-center justify-between w-full gap-8 py-6 text-2xl md:py-20 md:items-start lg:flex-nowrap">
           <LogoSection />
@@ -81,7 +57,7 @@ const LogoSection = () => {
             alt="Finnoto Logo"
           />
         </Link>
-        <p className="text-base">
+        <p className="text-sm">
           Tailored solutions addressing contemporary business requirements and
           innovative approaches to effectively meet the demands of today&lsquo;s
           dynamic and evolving marketplace.
@@ -98,7 +74,7 @@ const LogoSection = () => {
 
 const NavigationSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
       {data?.map((val) => {
         return (
           <NavigationList

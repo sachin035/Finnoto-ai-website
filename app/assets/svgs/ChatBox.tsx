@@ -1,13 +1,14 @@
 import {SVGProps} from "react";
 
-export const ChatBox = (props: SVGProps<SVGSVGElement>) => {
+export const ChatBox = ({className, ...props}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="125"
-      height="108"
+      // width="125"
+      // height="108"
       viewBox="0 0 125 108"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
       {...props}
     >
       <path

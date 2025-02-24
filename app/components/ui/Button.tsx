@@ -22,12 +22,12 @@ const buttonVariants = cva(
           "bg-transparent border-primary-white border font-semibold text-primary-white rounded-md",
         stacked:
           "relative bg-primary-white text-primary font-semibold rounded-md before:absolute before:inset-0 before:rounded before:bg-secondary before:-z-10 before:-translate-x-1 before:translate-y-1 before:transition-transform",
-        green: "bg-green text-primary-white rounded-full",
+        green: "bg-green text-primary-white rounded-full text-sm",
       },
       size: {
         default: "py-2 px-4",
         sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
+        lg: " py-2 lg:py-4 md:px-6 px-2",
         icon: "h-9 w-9",
       },
     },

@@ -1,13 +1,14 @@
 import {SVGProps} from "react";
 
-export const AiIcon = (props: SVGProps<SVGSVGElement>) => {
+export const AiIcon = ({className, ...props}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="193"
-      height="194"
+      // width="193"
+      // height="194"
       viewBox="0 0 193 194"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
       {...props}
     >
       <path

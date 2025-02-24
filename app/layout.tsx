@@ -4,10 +4,16 @@ import {Poppins} from "next/font/google";
 import "./globals.css";
 import {Navbar} from "./components/layout/Navbar";
 
+import {JoinUsWrapper} from "./components/home/JoinUsWrapper";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+// const schoolbell = Schoolbell({
+//   subsets: ["latin"],
+//   weight: "400",
+// });
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -33,10 +39,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className={poppins.className}
+        className={`${poppins.className} `}
       >
         <Navbar />
         {children}
+        <JoinUsWrapper />
       </body>
     </html>
   );
