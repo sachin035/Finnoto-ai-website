@@ -1,14 +1,15 @@
 import {SVGProps} from "react";
 
-export const Dot = (props: SVGProps<SVGSVGElement>) => {
+export const Dot = ({className, ...props}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="1015"
-      height="495"
+      // width="1015"
+      // height="495"
       viewBox="0 0 1015 495"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
+      className={className}
     >
       <path
         d="M3.58225 301.43C3.58225 302.431 2.78034 303.242 1.79113 303.242C0.801914 303.242 0 302.431 0 301.43C0 300.428 0.801914 299.617 1.79113 299.617C2.78034 299.617 3.58225 300.428 3.58225 301.43Z"

@@ -37,7 +37,7 @@ const Products = () => {
       header: {
         label: "AI-Powered Report Generation & Insights",
         appearance: "base",
-        title: "Extract Data with 99% Accuracy & 10x Speed",
+        title: "Extract Data with 99% Accuracy & 10x Speeds",
         description:
           "Finnoto AI instantly converts scanned documents into structured data with 99% accuracy. Process invoices, receipts, and forms 10x faster—eliminating manual entry and errors. ",
       },

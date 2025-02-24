@@ -36,8 +36,8 @@ const ContactPage = () => {
         hideIcon
       ></LandingSection>
 
-      <Container className="mt-20 mb-20 flex flex-col items-center">
-        <div className="flex flex-col md:flex-row h-fit text-primary-black relative overflow-hidden items-center bg-secondary-black">
+      <Container className="mt-20 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full text-primary-black from-[#4CC3C7] to-[#4CC1C7] bg-gradient-to-r rounded-lg p-4">
           <ContactCard
             description={
               <Link href="mailto:support@finnoto.com">support@finnoto.com</Link>
@@ -66,11 +66,13 @@ const ContactCard = ({
   const Icon = icon;
 
   return (
-    <div className="w-full h-fit rounded-lg p-4 flex flex-col items-center gap-4 text-center">
-      <div className="w-[200px] h-[150px] bg-primary-white rounded-xl flex items-center justify-center text-primary">
+    <div className="flex flex-col items-center justify-between h-full min-h-[300px] p-4">
+      <div className="w-[200px] h-[150px] bg-primary-white rounded-xl flex items-center justify-center text-primary mb-4">
         <Icon height={50} width={50} />
       </div>
-      <p className="text-primary-white">{description}</p>
+      <div className="flex items-center flex-grow">
+        <p className="text-primary-white text-center">{description}</p>
+      </div>
     </div>
   );
 };

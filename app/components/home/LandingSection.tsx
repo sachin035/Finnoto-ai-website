@@ -31,48 +31,58 @@ const LandingSection = ({
     },
   ];
   return (
-    <Container
-      mode="wide"
-      className="pt-16 relative flex flex-col items-center bg-[url('/images/home/matrix-full.png')] bg-cover"
-    >
-      {!hideIcon && (
-        <div className="flex flex-1 justify-center items-center pb-6 lg:gap-11 md:gap-8 gap-4 ">
-          {aiOverviews.map((overview, index) => {
-            const Icon = overview.icon;
-            return (
-              <div
-                className="flex lg:gap-3 md:gap-2 sm:gap-1 items-center shrink-0"
-                key={index}
-              >
-                <Icon className="md:w-8 md:h-8 w-6 h-6" />
-                <h3>{overview?.title}</h3>
-              </div>
-            );
-          })}
-        </div>
-      )}
-      <div className="space-y-5 max-w-[80%] xl:max-w-[50%] text-center">
-        {title}
-        <p className="text-sm md:text-base lg:text-xl  text-secondary-black">
-          {description}
-        </p>
-      </div>
-
-      <div className="relative w-full pt-16 flex items-center justify-center">
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <Button variant="green" size="lg">
-            Contact Us
-          </Button>
-        </div>
-
-        <div className="flex items-center gap-1 md:gap-2 text-[#4040FF] absolute left-1/2 transform -translate-x-1/2 -ml-[100px] md:-ml-[160px] lg:-ml-[180px]">
-          <div className="text-left text-[10px] md:text-sm lg:text-base">
-            We respond <p>Quickly</p>
+    <div className="relative">
+      <div
+        className="absolute inset-x-0 top-[-8rem] bottom-0 z-[-1]"
+        style={{
+          backgroundImage: "url('/images/home/matrix-full.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      <Container
+        mode="wide"
+        className="pt-16 relative flex flex-col items-center  "
+      >
+        {!hideIcon && (
+          <div className="flex flex-1 justify-center items-center pb-6 lg:gap-11 md:gap-8 gap-4 ">
+            {aiOverviews.map((overview, index) => {
+              const Icon = overview.icon;
+              return (
+                <div
+                  className="flex lg:gap-3 md:gap-2 sm:gap-1 items-center shrink-0"
+                  key={index}
+                >
+                  <Icon className="md:w-8 md:h-8 w-6 h-6" />
+                  <h3>{overview?.title}</h3>
+                </div>
+              );
+            })}
           </div>
-          <Arrow className="w-8 h-8 md:w-16 md:h-16 lg:w-20 lg:h-20" />
+        )}
+        <div className="space-y-5 max-w-[80%] xl:max-w-[50%] text-center">
+          {title}
+          <p className="text-sm md:text-base lg:text-xl  text-secondary-black">
+            {description}
+          </p>
         </div>
-      </div>
-    </Container>
+
+        <div className="relative w-full pt-16 flex items-center justify-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <Button variant="green" size="lg">
+              Contact Us
+            </Button>
+          </div>
+
+          <div className="flex items-center gap-1 md:gap-2 text-[#4040FF] absolute left-1/2 transform -translate-x-1/2 -ml-[100px] md:-ml-[160px] lg:-ml-[180px]">
+            <div className="text-left text-[10px] md:text-sm lg:text-base font-schoolbell">
+              We respond <p>Quickly</p>
+            </div>
+            <Arrow className="w-8 h-8 md:w-16 md:h-16 lg:w-20 lg:h-20" />
+          </div>
+        </div>
+      </Container>
+    </div>
   );
 };
 

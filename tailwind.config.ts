@@ -25,6 +25,9 @@ export default {
         "primary-black": "hsl(var(--primary-black))",
         "secondary-black": "hsl(var(--secondary-black))",
       },
+      fontFamily: {
+        schoolbell: ["Schoolbell", "serif"],
+      },
 
       height: {
         navbar: "var(--navbar-height)",

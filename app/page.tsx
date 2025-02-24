@@ -9,23 +9,8 @@ import {MissionSection} from "./components/home/MissionSection";
 import {Faq} from "./components/home/Faq";
 
 export const metadata: Metadata = {
-  title: "Finnoto - Solution",
-  applicationName: "Finnoto - Solution",
-  openGraph: {
-    type: "website",
-    title: "Finnoto - Solutions",
-    url: "https://finnoto.com/",
-    images: [
-      {
-        url: "https://finnoto.com/_next/image?url=%2Fimages%2Fspend-management.webp&w=1080&q=75",
-        alt: "img",
-      },
-    ],
-    description:
-      "Finnoto empowers you with customizable dashboards for efficient business operations. Stay well-informed with real-time spend management updates and enhance your Vendor and HR management capabilities. Make informed decisions, devise strategies, and streamline your business processes effortlessly.",
-  },
-  description:
-    "Finnoto empowers you with customizable dashboards for efficient business operations. Stay well-informed with real-time spend management updates and enhance your Vendor and HR management capabilities. Make informed decisions, devise strategies, and streamline your business processes effortlessly.",
+  title: "Home",
+  description: "Finnoto",
 };
 
 export default function Home() {
@@ -43,19 +28,24 @@ export default function Home() {
         }
         description="Turn your sales playbook and unstructured data into complete pipeline visibility, risk insights, and winning behaviors."
       ></LandingSection>
+
       <div className="mb-20 mt-24">
         <TrustedClients />
       </div>
+
       <div className="mb-20">
         <WorkingMethod />
       </div>
-      <div className="mb-20 ">
+
+      <div className="mb-36 mt-14">
         <Products />
       </div>
-      <div className="mb-20">
+
+      <div className="mb-36 mt-14">
         <MissionSection />
       </div>
-      <div className="mb-20">
+
+      <div className="mb-36 mt-14">
         <Faq />
       </div>
     </main>
