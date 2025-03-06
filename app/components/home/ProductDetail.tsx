@@ -16,13 +16,14 @@ const ProductDetail = ({header, image, reverseOrder}: ProductDetailProps) => {
   return (
     <Container
       className={cn(
-        "flex flex-col md:flex-row justify-between items-center md:items-start gap-10 md:gap-0 p-8 relative",
+        "flex flex-col md:flex-row justify-between items-center md:items-start gap-10 md:gap-0 py-8 relative",
         {
           "md:flex-row-reverse": !reverseOrder,
         }
       )}
     >
       {/* <SmallBoxDot className="absolute top-10 left-8" /> */}
+
       <div className="flex flex-col justify-center items-center md:items-start w-full w-[70%] md:w-[45%] gap-10">
         <SectionHeader {...header} />
 
@@ -30,7 +31,7 @@ const ProductDetail = ({header, image, reverseOrder}: ProductDetailProps) => {
           <Button variant="green">Contact Us</Button>
         </div>
       </div>
-      <div className="w-full md:w-[45%] p-[40px] border rounded-lg flex items-center justify-center">
+      <div className="w-[80%] md:w-[45%] p-[40px] border rounded-lg flex items-center justify-center">
         <Image src={image} alt="product" width={397} height={482} />
       </div>
     </Container>

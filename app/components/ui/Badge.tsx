@@ -6,6 +6,7 @@ export const statusColorSolid = {
   warning: "bg-[#FFF7EA] text-[#F8B84E]",
   success: "bg-[#EBFFF4] text-[#53A578]",
   base: "bg-[#EFEAFF] text-[#9D83E8]",
+  lightGreen: "text-[#396C82] bg-[#EBF9FF]",
 };
 
 interface BadgeProps {

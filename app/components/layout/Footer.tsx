@@ -3,12 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import {Container} from "./Container";
-import {TwitterIcon} from "@/app/assets/svgs/Twitter";
-import {FacebookIcon} from "@/app/assets/svgs/Facebook";
-import {InstagramIcon} from "@/app/assets/svgs/Instagram";
 import {Encryption} from "@/app/assets/svgs/Encryption";
 import {IsoCertification} from "@/app/assets/svgs/IsoCertification";
-import {LinkedInIcon} from "@/app/assets/svgs/LinkedIn";
 
 const data = [
   {
@@ -20,20 +16,13 @@ const data = [
   },
   {
     title: "Company",
-    lists: [{name: "About", link: "/about"}],
+    lists: [{name: "About Us", link: "/about"}],
   },
-];
-
-const socialIcons = [
-  {name: "Twitter", link: "", icon: TwitterIcon},
-  {name: "Facebook", link: "", icon: FacebookIcon},
-  {name: "Instagram", link: "", icon: InstagramIcon},
-  {name: "LinkedIn", link: "", icon: LinkedInIcon},
 ];
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-black text-primary-white ">
+    <footer className="bg-primary text-primary-white">
       <Container>
         <div className="flex flex-wrap items-center justify-between w-full gap-8 py-6 text-2xl md:py-20 md:items-start lg:flex-nowrap">
           <LogoSection />
@@ -57,16 +46,17 @@ const LogoSection = () => {
             alt="Finnoto Logo"
           />
         </Link>
-        <p className="text-sm">
+        <p className="text-base">
           Tailored solutions addressing contemporary business requirements and
           innovative approaches to effectively meet the demands of today&lsquo;s
           dynamic and evolving marketplace.
         </p>
       </div>
 
-      <div className="flex gap-8">
-        <Encryption />
-        <IsoCertification />
+      <div className="flex gap-8 justify-start items-center">
+        <Image src="/images/home/soc.png" alt="soc" width={50} height={50} />
+        <Encryption className="w-[88px] h-[37px]" />
+        <IsoCertification className="w-[87px] h-[37px]" />
       </div>
     </div>
   );
@@ -118,18 +108,6 @@ const BottomComponent = () => {
         © Copyright 2022, All Rights Reserved by Finnoto Solutions Private
         Limited
       </p>
-      <div className="flex items-center gap-4">
-        {socialIcons?.map((icon) => (
-          <Link
-            key={icon.name}
-            href={icon.link}
-            target="_blank"
-            className="bg-primary-white w-6 h-6 rounded-full flex items-center justify-center"
-          >
-            <icon.icon />
-          </Link>
-        ))}
-      </div>
     </div>
   );
 };

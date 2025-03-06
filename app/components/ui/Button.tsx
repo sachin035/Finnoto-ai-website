@@ -22,7 +22,7 @@ const buttonVariants = cva(
           "bg-transparent border-primary-white border font-semibold text-primary-white rounded-md",
         stacked:
           "relative bg-primary-white text-primary font-semibold rounded-md before:absolute before:inset-0 before:rounded before:bg-secondary before:-z-10 before:-translate-x-1 before:translate-y-1 before:transition-transform",
-        green: "bg-green text-primary-white rounded-full text-sm",
+        green: "bg-green text-primary-white rounded-full",
       },
       size: {
         default: "py-2 px-4",

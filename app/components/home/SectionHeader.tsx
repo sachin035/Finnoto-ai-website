@@ -40,7 +40,7 @@ const SectionHeader = ({
       </h2>
       <p
         className={cn(
-          "text-sm  md:text-lg lg:text-2xl lg:leading-[2rem] font-normal text-secondary-black",
+          " md:text-lg lg:text-2xl lg:leading-[2rem] font-normal text-secondary-black",
           {
             "text-center": mode === "center",
           }

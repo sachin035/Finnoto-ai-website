@@ -1,3 +1,4 @@
+import plugin from "tailwindcss/plugin";
 import type {Config} from "tailwindcss";
 
 export default {
@@ -9,10 +10,10 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
-      screens: {
-        xl: "1080px",
-      },
+      // padding: "1rem",
+      // screens: {
+      //   xl: "1080px",
+      // },
     },
     extend: {
       colors: {
@@ -40,5 +41,25 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({addComponents}) => {
+      addComponents({
+        ".container": {
+          maxWidth: "calc(100% - 32px)",
+          "@screen md": {
+            maxWidth: "768px",
+          },
+          "@screen lg": {
+            maxWidth: "960px",
+          },
+          "@screen xl": {
+            maxWidth: "1280px",
+          },
+          "@screen 2xl": {
+            maxWidth: "1400px",
+          },
+        },
+      });
+    }),
+  ],
 } satisfies Config;

@@ -38,7 +38,7 @@ const faqs: FaqCardProps[] = [
 
 const Faq = () => {
   return (
-    <Container className="flex flex-col gap-16  px-12 lg:px-[76px]" mode="wide">
+    <Container className="flex flex-col gap-16 ">
       <div className={cn("flex flex-col items-center")}>
         <p
           className={cn(
@@ -56,7 +56,7 @@ const Faq = () => {
         </h2>
         <p
           className={cn(
-            "text-sm md:text-[1.2rem] font-medium text-secondary-black text-center"
+            " md:text-[20px] font-medium text-secondary-black text-center"
           )}
         >
           Clear your doubts with us

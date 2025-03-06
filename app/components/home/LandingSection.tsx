@@ -40,10 +40,8 @@ const LandingSection = ({
           backgroundPosition: "center",
         }}
       />
-      <Container
-        mode="wide"
-        className="pt-16 relative flex flex-col items-center  "
-      >
+
+      <Container className="pt-16 relative flex flex-col items-center w-[68%]">
         {!hideIcon && (
           <div className="flex flex-1 justify-center items-center pb-6 lg:gap-11 md:gap-8 gap-4 ">
             {aiOverviews.map((overview, index) => {
@@ -60,11 +58,29 @@ const LandingSection = ({
             })}
           </div>
         )}
-        <div className="space-y-5 max-w-[80%] xl:max-w-[50%] text-center">
+        {/* <div className="space-y-5 max-w-[80%] xl:max-w-[50%] text-center">
+          <Image
+            src="/images/home/robot.png"
+            alt="robot"
+            width={80}
+            height={70}
+          />
           {title}
           <p className="text-sm md:text-base lg:text-xl  text-secondary-black">
             {description}
           </p>
+        </div> */}
+        <div className="flex flex-col items-center text-center space-y-5 ">
+          <div className="flex items-start ">
+            {/* <Image
+              src="/images/home/robot.png"
+              alt="robot"
+              width={80}
+              height={70}
+            /> */}
+            <h2 className="text-lg font-semibold">{title}</h2>
+          </div>
+          <p className=" lg:text-[24px] text-secondary-black">{description}</p>
         </div>
 
         <div className="relative w-full pt-16 flex items-center justify-center">
