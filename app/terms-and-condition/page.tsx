@@ -809,6 +809,7 @@ const TermsAndCondition = () => {
         title={<LandingHeader>Terms and Conditions</LandingHeader>}
         description="Our Terms and Conditions"
         hideIcon
+        backgroundHeight="130%"
       ></LandingSection>
 
       <Container className="space-y-16 mt-16 flex flex-col items-center">
@@ -846,8 +847,10 @@ const ListItems = ({
   subListItems?: ListItem[];
 }) => {
   return (
-    <li className="list-decimal">
-      <span className="inline-block mb-2 text-lg font-semibold">{title}</span>
+    <li className="list-decimal ">
+      <span className="inline-block mb-2 text-lg font-semibold align-top">
+        {title}
+      </span>
       <br />
       <div className="gap-2 flex flex-col">
         {items?.map((val, index) => (

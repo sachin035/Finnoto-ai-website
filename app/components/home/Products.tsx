@@ -10,7 +10,7 @@ const Products = () => {
         description:
           "Finnoto AI instantly converts scanned documents into structured data with 99% accuracy. Process invoices, receipts, and forms 10x faster—eliminating manual entry and errors. ",
       },
-      image: "/images/home/ocr-data.png",
+      image: "/images/home/ocr-datas.png",
     },
     {
       header: {
@@ -52,7 +52,7 @@ const Products = () => {
         description:
           "Ask Finnoto AI for any report—sales, expenses, invoices, or financial summaries—and get detailed insights with interactive graphs in seconds.",
       },
-      image: "/images/home/reports-data.png",
+      image: "/images/home/report-data.png",
       reverseOrder: true,
     },
 
@@ -70,7 +70,7 @@ const Products = () => {
 
   return (
     <div>
-      <h3 className="text-[24px] md:text-[48px] lg-[61px] font-semibold text-center mb-8">
+      <h3 className="text-[24px] md:text-[40px] font-semibold text-center mb-8">
         Power your revenue engine
       </h3>
 

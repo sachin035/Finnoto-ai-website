@@ -29,6 +29,7 @@ const AboutPage = () => {
         title={<LandingHeader>About Us</LandingHeader>}
         description="Who we are and what we do"
         hideIcon
+        backgroundHeight="130%"
       ></LandingSection>
 
       <Container
@@ -47,14 +48,14 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="max-w-[90%] md:max-w-[50%] text-center [&_p]:text-sm  md:[&_p]:text-lg md:[&_p]:leading-8 [&_p]:text-secondary-black [&_p]:font-medium [&_h3]:text-lg  md:[&_h3]:text-2xl md:[&_h3]:leading-9 [&_h3]:text-primary-black [&_h3]:font-semibold [&_h3]:mt-6">
+        <div className="max-w-[90%] md:max-w-[50%] text-center [&_p]:text-sm  md:[&_p]:text-[20px] md:[&_p]:leading-8 [&_p]:text-secondary-black [&_p]:font-normal [&_h3]:text-[20px]  md:[&_h3]:text-[20px] md:[&_h3]:leading-9 [&_h3]:text-primary-black [&_h3]:font-semibold [&_h3]:mt-6">
           <p>
             We streamline financial operations for businesses through
             simplifying various aspects of financial management and providing
             effective solutions.
           </p>
 
-          <p>
+          <p className="mt-6">
             Finnoto empowers you with customizable dashboards for efficient
             business operations. Stay well-informed with real-time spend
             management updates and enhance your Vendor and HR management
@@ -63,31 +64,41 @@ const AboutPage = () => {
             services:
           </p>
 
+          <h3>Account Payable:</h3>
+
+          <p>
+            Streamline your accounts payable process with advanced automation
+            that reduces manual effort, enhances accuracy, and integrates
+            seamlessly with your financial systems
+          </p>
+
+          <h3>Accounts Receivable:</h3>
+          <p>
+            Track every step of the order-to-cash process, from order placement
+            to cash receipt, with a transparent and efficient AR portal.
+            Simplify dispute management and optimize financial operations.
+          </p>
+
+          <h3>Payment Automation:</h3>
+          <p>
+            Automate end-to-end payment workflows to ensure compliance, reduce
+            risks, and gain real-time insights. Achieve complete visibility and
+            control over financial transactions.
+          </p>
+
           <h3>Vendor Management:</h3>
 
           <p>
-            We offer comprehensive solutions that focus on precise vendor data
-            management, improving efficiency and ensuring compliance within your
-            organisation.
-          </p>
-
-          <h3>Spend Management:</h3>
-          <p>
-            We offer enhanced financial health for your business by optimising
-            efficiency, reducing costs, and ensuring compliance through
-            automated workflows.
-          </p>
-
-          <h3>Reconciliation and Dispute management:</h3>
-
-          <p>
-            Conflict resolution with real-time tracking, and effective
-            strategies to minimise legal risks and foster collaboration.
+            Manage vendor relationships with ease through secure onboarding,
+            performance tracking, and compliance handling. Enhance collaboration
+            and maintain tax and KYC compliance via a dedicated portal.
           </p>
         </div>
       </Container>
 
-      <Faq />
+      <div className="mb-36 mt-36">
+        <Faq />
+      </div>
     </main>
   );
 };

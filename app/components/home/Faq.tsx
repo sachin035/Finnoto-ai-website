@@ -22,17 +22,17 @@ const faqs: FaqCardProps[] = [
   {
     title: "How does your vendor management and payment system work?",
     description:
-      "Our product facilitates reconciliation and dispute resolution with one-time, no-code integration. It automates multi-way reconciliation, ensuring accurate transactional data. Real-time dashboards and reports enhance financial efficiency by offering insights and enabling prompt action.",
+      "Our system enables real-time tracking and transparency in invoicing, streamlining flow, reducing errors, and improving Client-Vendor relationships. Automated processes ensure easy monitoring, quick issue resolution, and trust-building. Implementing it establishes efficient payments and positive vendor relationships for businesses.",
   },
   {
     title: "How can your products enhance financial management?",
     description:
-      "Our product facilitates reconciliation and dispute resolution with one-time, no-code integration. It automates multi-way reconciliation, ensuring accurate transactional data. Real-time dashboards and reports enhance financial efficiency by offering insights and enabling prompt action.",
+      "Our products enhance financial management through automated reconciliation, dispute management, and vendor payments. Real-time insights aid decision-making, while transparency builds trust with vendors. Streamlined expense management reduces costs and improves financial control.",
   },
   {
     title: "Are your products scalable for businesses of different sizes?",
     description:
-      "Our product facilitates reconciliation and dispute resolution with one-time, no-code integration. It automates multi-way reconciliation, ensuring accurate transactional data. Real-time dashboards and reports enhance financial efficiency by offering insights and enabling prompt action.",
+      "Absolutely! Our scalable products are adaptable to businesses of all sizes, from startups to enterprises. We recognise the varying needs based on company size and offer flexible solutions tailored to meet those requirements.",
   },
 ];
 

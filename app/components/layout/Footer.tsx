@@ -22,7 +22,7 @@ const data = [
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-white">
+    <footer className="bg-primary-black text-primary-white">
       <Container>
         <div className="flex flex-wrap items-center justify-between w-full gap-8 py-6 text-2xl md:py-20 md:items-start lg:flex-nowrap">
           <LogoSection />

@@ -46,7 +46,7 @@ const Navbar = () => {
         <AnimateHeight
           duration={300}
           height={isMenuOpen ? "auto" : 0}
-          className="md:hidden absolute top-full right-0 bg-white overflow-hidden -translate-y-5 rounded-b-3xl"
+          className="lg:hidden absolute top-full left-0 right-0 bg-white overflow-hidden -translate-y-5 rounded-b-3xl"
         >
           <div className="p-4 flex flex-col gap-3">
             <Link
@@ -69,7 +69,7 @@ const Navbar = () => {
 
         <ul className="hidden md:flex gap-10 md:gap-6 items-center">
           <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact Us</Link>
+          {/* <Link href="/contact">Contact Us</Link> */}
         </ul>
 
         <div className="hidden md:flex md:gap-4 text-primary-black">

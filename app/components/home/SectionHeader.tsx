@@ -30,7 +30,7 @@ const SectionHeader = ({
 
       <h2
         className={cn(
-          "text-2xl md:text-[2rem] lg:text-[3rem] leading-10 font-semibold lg:leading-[3.75rem] md:leading-[2.5rem]",
+          "text-2xl md:text-[2rem] lg:text-[36px] leading-10 font-semibold lg:leading-[3.75rem] md:leading-[2.5rem]",
           {
             "md:text-[2.5rem] text-center": mode === "center",
           }
@@ -51,55 +51,5 @@ const SectionHeader = ({
     </div>
   );
 };
-
-// const SectionHeader = ({
-//   title,
-//   description,
-//   prefix,
-//   mode = "left",
-// }: SectionHeaderProps) => {
-//   return (
-//     <div
-//       className={cn("flex flex-col", {
-//         "items-center": mode === "center",
-//       })}
-//     >
-//       {prefix ? (
-//         <p
-//           className={cn(
-//             "text-base md:mb-2 w-fit uppercase font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent",
-//             {
-//               "mb-2 md:mb-5": mode === "center",
-//             }
-//           )}
-//         >
-//           {prefix}
-//         </p>
-//       ) : (
-//         <Badge label={label} appearance={appearance} />
-//       )}
-//       <h2
-//         className={cn(
-//           "text-2xl md:text-[2.25rem] leading-10 font-semibold mb-5",
-//           {
-//             "md:text-[2.5rem] text-center": mode === "center",
-//           }
-//         )}
-//       >
-//         {title}
-//       </h2>
-//       <p
-//         className={cn(
-//           "text-sm md:text-[1.2rem] font-medium text-secondary-black",
-//           {
-//             "text-center": mode === "center",
-//           }
-//         )}
-//       >
-//         {description}
-//       </p>
-//     </div>
-//   );
-// };
 
 export {SectionHeader};
