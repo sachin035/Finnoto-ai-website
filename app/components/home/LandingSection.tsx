@@ -131,7 +131,7 @@ const LandingSection = ({
   title,
   hideIcon = false,
   hideContactButton = false,
-  backgroundHeight = "121.4%",
+  backgroundHeight,
 }: LandingSectionProps) => {
   const aiOverviews = [
     {
@@ -159,15 +159,17 @@ const LandingSection = ({
           height: backgroundHeight,
         }}
       /> */}
-      <div
-        className="absolute inset-x-0 top-[-8rem] bottom-0 z-[-1]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #F0F0F0 1px, transparent 1px), linear-gradient(to bottom, #F0F0F0 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-          height: backgroundHeight,
-        }}
-      />
+      {backgroundHeight && (
+        <div
+          className="absolute inset-x-0 top-[-8rem] bottom-0 z-[-1]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #F0F0F0 1px, transparent 1px), linear-gradient(to bottom, #F0F0F0 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+            height: backgroundHeight,
+          }}
+        />
+      )}
 
       <Container className="pt-16 pb-24 relative flex flex-col items-center w-[68%] ">
         {!hideIcon && (
