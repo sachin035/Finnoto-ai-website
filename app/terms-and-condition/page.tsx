@@ -4,6 +4,8 @@ import {Container} from "../components/layout/Container";
 import {LandingSection} from "../components/home/LandingSection";
 import {LandingHeader} from "../components/home/LandingHeader";
 import type {JSX} from "react";
+import {Navbar} from "../components/layout/Navbar";
+import {JoinUsWrapper} from "../components/home/JoinUsWrapper";
 
 type ListItem = {
   para: string | JSX.Element;
@@ -805,11 +807,12 @@ law, regulatory requirements or professional standards`,
 const TermsAndCondition = () => {
   return (
     <main>
+      <Navbar />
       <LandingSection
         title={<LandingHeader>Terms and Conditions</LandingHeader>}
         description="Our Terms and Conditions"
         hideIcon
-        backgroundHeight="128%"
+        backgroundHeight="130%"
       ></LandingSection>
 
       <Container className="space-y-16 mt-16 flex flex-col items-center">
@@ -833,6 +836,7 @@ const TermsAndCondition = () => {
           </div>
         </div>
       </Container>
+      <JoinUsWrapper />
     </main>
   );
 };

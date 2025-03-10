@@ -2,9 +2,6 @@ import type {Metadata} from "next";
 
 import {Poppins} from "next/font/google";
 import "./globals.css";
-import {Navbar} from "./components/layout/Navbar";
-
-import {JoinUsWrapper} from "./components/home/JoinUsWrapper";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className}`}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <JoinUsWrapper />
+        {/* <JoinUsWrapper /> */}
       </body>
     </html>
   );
