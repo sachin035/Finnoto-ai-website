@@ -28,8 +28,8 @@ const Navbar = () => {
         }`}
       >
         <Container
-          className={`flex justify-between ${
-            hasScrolled ? "bg-primary-white" : "bg-background"
+          className={`flex justify-between  ${
+            hasScrolled ? "bg-primary-white " : "bg-background"
           } items-center h-navbar rounded-full shadow-[0px_8px_10px_#0C0C0D0D] px-4`}
         >
           <Link href="/">
