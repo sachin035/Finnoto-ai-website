@@ -34,7 +34,7 @@ const ContactPage = () => {
         title={<LandingHeader>Contact Us</LandingHeader>}
         description="Send us a signal – Let's explore financial universes together!"
         hideContactButton
-        backgroundHeight="130%"
+        backgroundHeight="128%"
       ></LandingSection>
 
       <Container className="mt-16 flex flex-col items-center">

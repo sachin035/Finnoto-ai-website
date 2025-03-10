@@ -809,7 +809,7 @@ const TermsAndCondition = () => {
         title={<LandingHeader>Terms and Conditions</LandingHeader>}
         description="Our Terms and Conditions"
         hideIcon
-        backgroundHeight="130%"
+        backgroundHeight="128%"
       ></LandingSection>
 
       <Container className="space-y-16 mt-16 flex flex-col items-center">

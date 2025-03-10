@@ -29,7 +29,7 @@ const AboutPage = () => {
         title={<LandingHeader>About Us</LandingHeader>}
         description="Who we are and what we do"
         hideIcon
-        backgroundHeight="130%"
+        backgroundHeight="128%"
       ></LandingSection>
 
       <Container
