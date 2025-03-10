@@ -109,7 +109,8 @@
 //   );
 // };
 
-// export {LandingSection};
+// export {LandingSection};import { useEffect, useRef, useState } from "react";
+"use client";
 import {Faster} from "@/app/assets/svgs/Faster";
 import {Container} from "../layout/Container";
 import {Smarter} from "@/app/assets/svgs/Smarter";
@@ -131,8 +132,21 @@ const LandingSection = ({
   title,
   hideIcon = false,
   hideContactButton = false,
-  backgroundHeight = "221%",
+  backgroundHeight,
 }: LandingSectionProps) => {
+  // const landingRef = useRef<HTMLDivElement | null>(null);
+  // const [landingHeight, setLandingHeight] = useState(0);
+
+  // useEffect(() => {
+  //   if (landingRef.current) {
+  //     const height = landingRef.current.clientHeight;
+  //     setLandingHeight(height);
+  //     if (onHeightChange) {
+  //       onHeightChange(height);
+  //     }
+  //   }
+  // }, [onHeightChange]);
+
   const aiOverviews = [
     {
       icon: Faster,
@@ -150,17 +164,19 @@ const LandingSection = ({
 
   return (
     <div className="relative w-full">
-      <div
-        className="absolute inset-x-0 top-[-8rem] bottom-0 z-[-1]"
-        style={{
-          backgroundImage: "url('/images/home/matrix-full.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: backgroundHeight,
-        }}
-      />
+      {backgroundHeight && (
+        <div
+          className="absolute inset-x-0 top-[-8rem] bottom-0 z-[-1]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+            height: backgroundHeight,
+          }}
+        />
+      )}
 
-      <Container className="pt-16 pb-24 relative flex flex-col items-center w-[68%] ">
+      <Container className="pt-16 pb-24 relative flex flex-col items-center w-[68%]">
         {!hideIcon && (
           <div className="flex flex-1 justify-center items-center pb-6 lg:gap-11 md:gap-8 gap-4">
             {aiOverviews.map((overview, index) => {
@@ -202,7 +218,6 @@ const LandingSection = ({
         )}
       </Container>
 
-      {/* Add bottom border line */}
       <div className="w-full h-[1px] bg-gray-200"></div>
     </div>
   );

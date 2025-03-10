@@ -9,6 +9,7 @@ import {EmailIcon} from "../assets/svgs/Email";
 import {LocationIcon} from "../assets/svgs/LocationIcon";
 import {Faq} from "../components/home/Faq";
 import {cn} from "../utils/util";
+import {Navbar} from "../components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Finnoto - Contact-Us",
@@ -30,11 +31,12 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <main>
+      <Navbar />
       <LandingSection
         title={<LandingHeader>Contact Us</LandingHeader>}
         description="Send us a signal – Let's explore financial universes together!"
         hideContactButton
-        backgroundHeight="130%"
+        backgroundHeight="120%"
       ></LandingSection>
 
       <Container className="mt-16 flex flex-col items-center">

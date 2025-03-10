@@ -3,6 +3,7 @@ import {LandingSection} from "../components/home/LandingSection";
 import {LandingHeader} from "../components/home/LandingHeader";
 import {Container} from "../components/layout/Container";
 import {Faq} from "../components/home/Faq";
+import {Navbar} from "../components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Finnoto - About Us",
@@ -25,11 +26,12 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <main>
+      <Navbar />
       <LandingSection
         title={<LandingHeader>About Us</LandingHeader>}
         description="Who we are and what we do"
         hideIcon
-        backgroundHeight="130%"
+        backgroundHeight="127.5%"
       ></LandingSection>
 
       <Container
