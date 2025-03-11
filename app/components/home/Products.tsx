@@ -10,11 +10,11 @@ const Products = () => {
         description:
           "Finnoto AI instantly converts scanned documents into structured data with 99% accuracy. Process invoices, receipts, and forms 10x faster—eliminating manual entry and errors. ",
       },
-      image: "/images/home/ocr-datas.png",
+      image: "/images/home/ocr-data.png",
     },
     {
       header: {
-        label: "EMAIL Data Extraction & Expense Approval",
+        label: "EMAIL DATA EXTRACTION & EXPENSE APPROVAL",
         appearance: "success",
         title: "Automate Expenses with 99% Accuracy & Zero Effort",
         description:
@@ -25,7 +25,7 @@ const Products = () => {
     },
     {
       header: {
-        label: "Anomaly Detection & Incident Management",
+        label: "ANOMALY DETECTION & INCIDENT MANAGEMENT",
         appearance: "warning",
         title: "Detect. Act. Resolve – 90% Faster!",
         description:
@@ -46,7 +46,7 @@ const Products = () => {
     // },
     {
       header: {
-        label: "AI-Powered Report Generation & Insights",
+        label: "AI-POWERED REPORT GENERATION & INSIGHTS",
         appearance: "base",
         title: "Instant Reports & Insights – 10x Faster Data Analysis",
         description:
@@ -58,7 +58,7 @@ const Products = () => {
 
     {
       header: {
-        label: "AI-Powered Report Generation & Insights",
+        label: "AI-POWERED KNOWLEDGE BASE ASSISTANT",
         appearance: "warning",
         title: "AI-Powered Knowledge Base Assistant – 24/7 Intelligent Support",
         description:
@@ -74,7 +74,7 @@ const Products = () => {
         Power your revenue engine
       </h3>
 
-      {products.map((product) => (
+      {/* {products.map((product) => (
         <div className="mb-10" key={product.header.title}>
           <ProductDetail
             header={product.header}
@@ -82,7 +82,17 @@ const Products = () => {
             reverseOrder={product.reverseOrder}
           />
         </div>
-      ))}
+      ))} */}
+      <div className="flex flex-col gap-10">
+        {products.map((product) => (
+          <ProductDetail
+            key={product.header.title}
+            header={product.header}
+            image={product.image}
+            reverseOrder={product.reverseOrder}
+          />
+        ))}
+      </div>
     </div>
   );
 };

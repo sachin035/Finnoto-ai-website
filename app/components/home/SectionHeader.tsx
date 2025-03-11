@@ -20,7 +20,7 @@ const SectionHeader = ({
   return (
     <div
       className={cn(
-        "flex flex-col gap-6 text-center items-center md:items-start md:text-start",
+        "flex flex-col gap-6 lg:gap-4 text-center items-center md:items-start md:text-start",
         {
           "items-center": mode === "center",
         }

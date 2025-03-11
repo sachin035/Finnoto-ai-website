@@ -117,6 +117,9 @@ import {Efficient} from "@/app/assets/svgs/Efficient";
 import {Button} from "../ui/Button";
 import {Arrow} from "@/app/assets/svgs/Arrow";
 import Link from "next/link";
+import Image from "next/image";
+import {Encryption} from "@/app/assets/svgs/Encryption";
+import {IsoCertification} from "@/app/assets/svgs/IsoCertification";
 
 interface LandingSectionProps {
   title: React.ReactNode;
@@ -171,7 +174,7 @@ const LandingSection = ({
         />
       )}
 
-      <Container className="pt-16 pb-24 relative flex flex-col items-center w-[68%] ">
+      <Container className="pt-16 pb-24 relative flex flex-col items-center w-[60%] pt-[154px] ">
         {!hideIcon && (
           <div className="flex flex-1 justify-center items-center pb-6 lg:gap-11 md:gap-8 gap-4">
             {aiOverviews.map((overview, index) => {
@@ -196,6 +199,22 @@ const LandingSection = ({
           <p className="lg:text-[24px] text-secondary-black">{description}</p>
         </div>
 
+        <div className="flex flex-col justify-center items-center mt-10">
+          <p className="text-secondary-white text-sm md:text-base">
+            Secure With
+          </p>
+          <div className="flex gap-6 justify-center items-center ">
+            <Image
+              src="/images/home/soc.png"
+              alt="soc"
+              height={40}
+              width={40}
+              className="md:h-[50px] md:w-[50px]"
+            />
+            <Encryption className="w-[60px] h-[37px] md:w-[88px] md:h-[37px]" />
+            <IsoCertification className="w-[60px] h-[37px] md:w-[88px] md:h-[37px]" />
+          </div>
+        </div>
         {!hideContactButton && (
           <div className="relative w-full pt-16 flex items-center justify-center">
             <div className="absolute left-1/2 transform -translate-x-1/2">
