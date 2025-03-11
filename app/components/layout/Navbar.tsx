@@ -212,19 +212,42 @@ import {Container} from "./Container";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
+    const scrollThreshold = 80;
+
+    setHasScrolled(window.scrollY > scrollThreshold);
+
     const handleScroll = () => {
-      setHasScrolled(window.scrollY > 80);
+      const currentScrollPos = window.scrollY;
+
+      const shouldBeScrolled = currentScrollPos > scrollThreshold;
+
+      if (shouldBeScrolled !== hasScrolled) {
+        if (shouldBeScrolled) {
+          setHasScrolled(true);
+
+          setIsTransitioning(true);
+
+          setTimeout(() => setIsTransitioning(false), 100);
+        } else {
+          setIsTransitioning(true);
+          setTimeout(() => {
+            setHasScrolled(false);
+            setTimeout(() => setIsTransitioning(false), 300);
+          }, 50);
+        }
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {passive: true});
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [hasScrolled]);
 
   return (
     <>
-      {/* Container for the overlay */}
       <Container className="sticky top-0 z-[99998]">
         <div
           className={`absolute w-full transition-opacity duration-300 bg-primary-white ${
@@ -238,7 +261,7 @@ const Navbar = () => {
 
       <nav
         className={`sticky transition-all duration-300 z-[99999] ${
-          hasScrolled ? "-top-5 pt-12" : "-top-5 py-12 pb-2"
+          hasScrolled || isTransitioning ? "-top-5 pt-12" : "-top-5 py-12 pb-2"
         }`}
       >
         <Container
@@ -293,7 +316,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex md:gap-4 text-primary-black">
             <Button variant="outline" asChild>
-              <Link href="/contact">Go to Finnoto</Link>
+              <Link href="https://finnoto.com/">Go to Finnoto</Link>
             </Button>
 
             <Button variant="green" asChild>

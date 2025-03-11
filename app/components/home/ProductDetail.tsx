@@ -4,6 +4,7 @@ import {Container} from "../layout/Container";
 import {Button} from "../ui/Button";
 import {SectionHeader, SectionHeaderProps} from "./SectionHeader";
 import {cn} from "@/app/utils/util";
+import Link from "next/link";
 // import {SmallBoxDot} from "@/app/assets/svgs/SmallBoxDot";
 
 export interface ProductDetailProps {
@@ -16,7 +17,7 @@ const ProductDetail = ({header, image, reverseOrder}: ProductDetailProps) => {
   return (
     <Container
       className={cn(
-        "flex flex-col md:flex-row p-4 justify-between items-center  gap-10 md:gap-0  py-8 relative",
+        "flex flex-col md:flex-row p-4 justify-between items-center  gap-10 md:gap-0  py-8 relative max-w-[1134px]",
         {
           "md:flex-row-reverse": !reverseOrder,
         }
@@ -28,16 +29,15 @@ const ProductDetail = ({header, image, reverseOrder}: ProductDetailProps) => {
         <SectionHeader {...header} />
 
         <div className="flex gap-3 lg:text-[20px]">
-          <Button variant="green">Contact Us</Button>
+          <Button variant="green" size="lg">
+            <Link href="/contact">Contact Us</Link>
+          </Button>
         </div>
       </div>
       <div
-        className={cn(
-          "w-[80%] md:w-[48%] flex justify-center md:justify-between",
-          {
-            "md:justify-end": reverseOrder,
-          }
-        )}
+        className={cn("w-[50%] flex justify-center md:justify-between", {
+          "md:justify-end": reverseOrder,
+        })}
       >
         <Image src={image} alt="product" width={397} height={482} />
       </div>

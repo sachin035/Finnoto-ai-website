@@ -118,8 +118,9 @@ import {Button} from "../ui/Button";
 import {Arrow} from "@/app/assets/svgs/Arrow";
 import Link from "next/link";
 import Image from "next/image";
-import {Encryption} from "@/app/assets/svgs/Encryption";
-import {IsoCertification} from "@/app/assets/svgs/IsoCertification";
+import {EncryptionColored} from "@/app/assets/svgs/EncryptionColored";
+import {IsoCertificationColored} from "@/app/assets/svgs/IsoCertificationColored";
+import {cn} from "@/app/utils/util";
 
 interface LandingSectionProps {
   title: React.ReactNode;
@@ -174,7 +175,12 @@ const LandingSection = ({
         />
       )}
 
-      <Container className="pt-16 pb-24 relative flex flex-col items-center w-[60%] pt-[154px] ">
+      <Container
+        className={cn(
+          "pt-16 pb-24 relative flex flex-col items-center w-[60%] pt-[154px]",
+          {"pt-20": backgroundHeight}
+        )}
+      >
         {!hideIcon && (
           <div className="flex flex-1 justify-center items-center pb-6 lg:gap-11 md:gap-8 gap-4">
             {aiOverviews.map((overview, index) => {
@@ -211,8 +217,8 @@ const LandingSection = ({
               width={40}
               className="md:h-[50px] md:w-[50px]"
             />
-            <Encryption className="w-[60px] h-[37px] md:w-[88px] md:h-[37px]" />
-            <IsoCertification className="w-[60px] h-[37px] md:w-[88px] md:h-[37px]" />
+            <EncryptionColored className="w-[60px] h-[37px] md:w-[88px] md:h-[37px]" />
+            <IsoCertificationColored className="w-[60px] h-[37px] md:w-[88px] md:h-[37px]" />
           </div>
         </div>
         {!hideContactButton && (
