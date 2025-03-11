@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {Container} from "../layout/Container";
 import {Button} from "../ui/Button";
 import {AiIcon} from "@/app/assets/svgs/AiIcon";
@@ -71,7 +72,7 @@ const JoinUs = () => {
                 </p>
                 <div>
                   <Button variant="green" className="px-6 py-3 rounded-full">
-                    Contact Us
+                    <Link href="/contact">Contact Us</Link>
                   </Button>
                 </div>
               </div>
