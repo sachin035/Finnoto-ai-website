@@ -28,10 +28,22 @@ export default function Home() {
             backgroundImage:
               "linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)",
             backgroundSize: "40px 40px",
-            maskImage:
-              "linear-gradient(to bottom, black calc(100% - 40px), transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, black calc(100% - 40px), transparent 100%)",
+            // maskImage:
+            //   "linear-gradient(to bottom, black calc(100% - 40px), transparent 100%)",
+            // WebkitMaskImage:
+            //   "linear-gradient(to bottom, black calc(100% - 40px), transparent 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-x-0 z-[-1]
+      top-[calc(100%-644px)]
+      md:top-[calc(100%-397px)]
+      xl:top-[calc(100%-238px)]
+      h-[200px]" // Adjust this height as needed
+          style={{
+            backgroundImage: "radial-gradient(#f0f0f0 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+            backgroundPosition: "0 0",
           }}
         />
         {/* Only include the Navbar once at the top level */}
@@ -49,7 +61,7 @@ export default function Home() {
           description="Turn your sales playbook and unstructured data into complete pipeline visibility, risk insights, and winning behaviors."
         />
 
-        <div className="mb-20 mt-24">
+        <div className="mb-20 ">
           <TrustedClients />
         </div>
 
